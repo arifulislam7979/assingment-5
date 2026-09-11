@@ -10,14 +10,14 @@ const fetchData = async() => {
   return data
 }
 function App() {
-  const [devData] = useState(() => fetchData())
+  const devData = fetchData()
 
   return (
     <div>
       <Navbar></Navbar>
       <Header></Header>
       <Suspense fallback={<p>Loading Date.........</p>}>
-        <Explore></Explore>
+        <Explore devData={devData}></Explore>
       </Suspense>
     </div>
   )
