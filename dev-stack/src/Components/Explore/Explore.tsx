@@ -31,7 +31,7 @@ const Explore = ({ devData }: ExploreProps) => {
   }
 
 return (
-    <section className="py-8">
+    <section className="mt-8 pb-25">
       <div className="container mx-auto">
         
         <h1 className="text-[36px] font-bold text-[#0F172A]">
@@ -136,7 +136,6 @@ return (
             )
           }
 
-          
         </div>
         
       </div>
