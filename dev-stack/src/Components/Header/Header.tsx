@@ -2,7 +2,7 @@ import image from '../../assets/banner-stack.png'
 
 const Header = () => {
 
-  return (
+return (
     
     <header>
         <div className="container mx-auto ">
@@ -48,7 +48,7 @@ const Header = () => {
 
             </div>
         </div>
-        </header>
+    </header>
   )
 }
 

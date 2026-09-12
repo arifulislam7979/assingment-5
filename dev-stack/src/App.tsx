@@ -11,6 +11,7 @@ const fetchDevData = async() => {
   const data = await res.json()
   return data
 }
+
 function App() {
   const [devData] = useState(()=>fetchDevData())
   return (

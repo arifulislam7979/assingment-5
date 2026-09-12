@@ -14,10 +14,6 @@ const Explore = ({ devData }: ExploreProps) => {
   
 
   const handleAddStack = (data: DevDataType) => {
-    const addButtonExisting = addStack.some(stack => stack.id === data.id)
-    if(addButtonExisting) {
-      return
-    }
     setAddStack([...addStack, data])
     toast.success('Added to Stack')
     
@@ -34,7 +30,7 @@ const Explore = ({ devData }: ExploreProps) => {
     toast.info('Remove All Stack')
   }
 
-  return (
+return (
     <section className="py-8">
       <div className="container mx-auto">
         
