@@ -10,7 +10,7 @@ const fetchData = async() => {
   return data
 }
 function App() {
-  const devData = fetchData()
+  const [devData] = useState(()=>fetchData())
 
   return (
     <div>

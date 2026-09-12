@@ -3,9 +3,10 @@ import { FaStar } from "react-icons/fa";
 
 export interface ExploreCardProps {
   data: DevDataType;
+  handleAddStack: (data: DevDataType) => void
 }
 
-const ExploreCard = ({ data }: ExploreCardProps) => {
+const ExploreCard = ({ data, handleAddStack }: ExploreCardProps) => {
   return (
     <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between">
       <div>
@@ -33,7 +34,7 @@ const ExploreCard = ({ data }: ExploreCardProps) => {
         </div>
       </div>
 
-      <button className="w-full mt-4 bg-[#080d1b] text-white text-sm py-2.5 rounded-lg hover:bg-gray-800 transition cursor-pointer font-medium">
+      <button onClick={()=>handleAddStack(data)} className="w-full mt-4 bg-[#080d1b] text-white text-sm py-2.5 rounded-lg hover:bg-gray-800 transition cursor-pointer font-medium">
         Add to Stack
       </button>
     </div>
