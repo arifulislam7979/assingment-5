@@ -1,28 +1,37 @@
-
-
 import { use, useState } from "react";
 import type DevDataType from "../../Type/devDataType";
 import ExploreCard from "../ExploreCard/ExploreCard";
 import { RxCross1 } from "react-icons/rx";
+import { toast } from "react-toastify";
 
 export interface ExploreProps {
   devData: Promise<DevDataType[]>;
 }
 
 const Explore = ({ devData }: ExploreProps) => {
-  const mainData = use(devData);
+  const mainData = use(devData)
   const [addStack, setAddStack] = useState<DevDataType[]>([])
+  
 
   const handleAddStack = (data: DevDataType) => {
-    
+    const addButtonExisting = addStack.some(stack => stack.id === data.id)
+    if(addButtonExisting) {
+      return
+    }
     setAddStack([...addStack, data])
+    toast.success('Added to Stack')
+    
   }
+
   const handleRemoveSingle = (id: number) => {
     const stackRemove = addStack.filter(stack => stack.id !== id)
     setAddStack(stackRemove)
+    toast.info('Remove Stack')
   }
+
   const handleRemoveAll = () => {
     setAddStack([]);
+    toast.info('Remove All Stack')
   }
 
   return (
@@ -43,11 +52,18 @@ const Explore = ({ devData }: ExploreProps) => {
           
           <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
-              mainData.map((data) => <ExploreCard
-               key={data.id} 
-               data={data} 
-               handleAddStack={handleAddStack}
-              />)
+              mainData.map((data) => {
+                const isAdded = addStack.some(stake => stake.id === data.id)
+
+                return (
+                  <ExploreCard
+                    key={data.id} 
+                    data={data} 
+                    handleAddStack={handleAddStack}
+                    isAdded={isAdded}
+                  ></ExploreCard>
+                )
+              })
             }
           </div>
 
@@ -124,9 +140,11 @@ const Explore = ({ devData }: ExploreProps) => {
             )
           }
 
-
+          
         </div>
+        
       </div>
+      
     </section>
   );
 };

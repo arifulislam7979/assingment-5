@@ -1,12 +1,14 @@
+import { BsCheckLg } from "react-icons/bs";
 import type DevDataType from "../../Type/devDataType";
 import { FaStar } from "react-icons/fa";
 
 export interface ExploreCardProps {
   data: DevDataType;
   handleAddStack: (data: DevDataType) => void
+  isAdded: boolean
 }
 
-const ExploreCard = ({ data, handleAddStack }: ExploreCardProps) => {
+const ExploreCard = ({ data, handleAddStack,isAdded }: ExploreCardProps) => {
   return (
     <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between">
       <div>
@@ -34,8 +36,23 @@ const ExploreCard = ({ data, handleAddStack }: ExploreCardProps) => {
         </div>
       </div>
 
-      <button onClick={()=>handleAddStack(data)} className="w-full mt-4 bg-[#080d1b] text-white text-sm py-2.5 rounded-lg hover:bg-gray-800 transition cursor-pointer font-medium">
-        Add to Stack
+      <button
+        onClick={() => handleAddStack(data)}
+        disabled={isAdded}
+        className={`w-full mt-4 text-sm py-2.5 px-4 rounded-lg transition font-medium flex items-center justify-center gap-1.5 ${
+          isAdded
+            ? "bg-pink-50 text-pink-600 border border-pink-200 cursor-not-allowed"
+            : "bg-[#080d1b] text-white hover:bg-gray-800 cursor-pointer justify-center"
+        }`}
+      >
+        {isAdded ? (
+          <div className="flex items-center gap-1">
+            <BsCheckLg className="w-4 h-4 text-pink-600" />
+            <span>Added to Stack</span>
+          </div>
+        ) : (
+          "Add to Stack"
+        )}
       </button>
     </div>
   );

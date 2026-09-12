@@ -3,25 +3,28 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Navbar from './Components/Navbar/Navbar'
 import Explore from './Components/Explore/Explore';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-const fetchData = async() => {
-  const res = await fetch('devData.json');
+const fetchDevData = async() => {
+  const res = await fetch('devData.json')
   const data = await res.json()
   return data
 }
 function App() {
-  const [devData] = useState(()=>fetchData())
-
+  const [devData] = useState(()=>fetchDevData())
   return (
     <div>
       <Navbar></Navbar>
       <Header></Header>
-      <Suspense fallback={<p>Loading Date.........</p>}>
+      <Suspense fallback={<p className='text-center'>Loading Date.........</p>}>
         <Explore devData={devData}></Explore>
       </Suspense>
+      <ToastContainer position='bottom-right'/>
     </div>
   )
-    
-}
 
+}
 export default App
+
+
