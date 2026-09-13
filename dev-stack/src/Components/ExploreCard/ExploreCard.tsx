@@ -4,17 +4,18 @@ import { FaStar } from "react-icons/fa";
 
 export interface ExploreCardProps {
   data: DevDataType;
-  handleAddStack: (data: DevDataType) => void
-  isAdded: boolean
+  handleAddStack: (data: DevDataType) => void;
+  isAdded: boolean;
 }
 
-const ExploreCard = ({ data, handleAddStack,isAdded }: ExploreCardProps) => {
-
-return (
-    <div className={`${isAdded ? 'border border-pink-500 rounded-xl' :'border border-gray-200 rounded-xl'} p-5 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between`}>
+const ExploreCard = ({ data, handleAddStack, isAdded }: ExploreCardProps) => {
+  return (
+    <div
+      className={`${isAdded ? "border border-pink-500 rounded-xl" : "border border-gray-200 rounded-xl"} p-5 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between`}
+    >
       <div>
         <div className="flex items-center justify-between mb-4">
-          <img src={data.icon} alt={data.name} className="w-10 h-10 "/>
+          <img src={data.icon} alt={data.name} className="w-10 h-10 " />
           <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-600">
             {data.badge}
           </span>
@@ -32,13 +33,22 @@ return (
           </span>
           <span className="text-xs text-gray-500 ">{data.difficulty}</span>
           <span className="text-xs text-gray-700 flex items-center gap-1">
-            <span className="text-yellow-500"> <FaStar /></span> {data.rating}
+            <span className="text-yellow-500">
+              {" "}
+              <FaStar />
+            </span>{" "}
+            {data.rating}
           </span>
         </div>
       </div>
 
-      <button onClick={() => handleAddStack(data)} disabled={isAdded} className={`w-full mt-4 text-sm py-2.5 px-4 rounded-lg transition font-medium flex items-center justify-center gap-1.5 ${
-        isAdded ? "bg-pink-50 text-pink-600 border border-pink-200 cursor-not-allowed" : "bg-[#080d1b] text-white hover:bg-gray-800 cursor-pointer justify-center"
+      <button
+        onClick={() => handleAddStack(data)}
+        disabled={isAdded}
+        className={`w-full mt-4 text-sm py-2.5 px-4 rounded-lg transition font-medium flex items-center justify-center gap-1.5 ${
+          isAdded
+            ? "bg-pink-50 text-pink-600 border border-pink-200 cursor-not-allowed"
+            : "bg-[#080d1b] text-white hover:bg-gray-800 cursor-pointer justify-center"
         }`}
       >
         {isAdded ? (
