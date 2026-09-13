@@ -13,17 +13,11 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-3 text-xs font-medium text-[#475569] pt-1">
-            <a href="#" className="hover:text-[#0F172A] transition">
-              GitHub
-            </a>
-            <span>•</span>
-            <a href="#" className="hover:text-[#0F172A] transition">
-              Twitter
-            </a>
-            <span>•</span>
-            <a href="#" className="hover:text-[#0F172A] transition">
-              LinkedIn
-            </a>
+            <a href="#" className="hover:text-[#0F172A] transition"> GitHub</a>
+
+            <span>•</span> <a href="#" className="hover:text-[#0F172A] transition"> Twitter </a>
+            
+            <span>•</span> <a href="#" className="hover:text-[#0F172A] transition"> LinkedIn </a>
           </div>
         </div>
 
@@ -35,24 +29,11 @@ const Footer = () => {
               modern software.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a
-                href="#"
-                className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition"
-              >
-                GitHub
-              </a>
-              <a
-                href="#"
-                className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition"
-              >
-                Twitter
-              </a>
-              <a
-                href="#"
-                className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition"
-              >
-                LinkedIn
-              </a>
+              <a href="#" className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition"> GitHub </a>
+
+              <a href="#" className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition" > Twitter</a>
+
+              <a href="#" className="text-xs font-semibold text-[#0F172A] hover:text-[#D91B7E] transition"> LinkedIn</a>
             </div>
           </div>
 
@@ -61,19 +42,13 @@ const Footer = () => {
             <h4 className="text-xs font-bold text-[#0F172A] mb-4">PRODUCT</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Home
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Home</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Technologies
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Technologies</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Projects
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Projects</a>
               </li>
             </ul>
           </div>
@@ -83,19 +58,13 @@ const Footer = () => {
             <h4 className="text-xs font-bold text-[#0F172A] mb-4">COMPANY</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  About
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> About </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Contact
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Contact</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Careers
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Careers</a>
               </li>
             </ul>
           </div>
@@ -105,14 +74,10 @@ const Footer = () => {
             <h4 className="text-xs font-bold text-[#0F172A] mb-4">LEGAL</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Privacy Policy
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition">  Privacy Policy</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#0F172A] transition">
-                  Terms of Service
-                </a>
+                <a href="#" className="hover:text-[#0F172A] transition"> Terms of Service </a>
               </li>
             </ul>
           </div>
@@ -120,12 +85,8 @@ const Footer = () => {
         <div className="border-t border-gray-100 pt-6 flex flex-row justify-between items-center text-[11px] sm:text-xs text-gray-400">
           <p>© 2026 Dev Stack. All rights reserved.</p>
           <div className="flex items-center gap-3">
-            <a href="#" className="hover:text-gray-600 transition">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-gray-600 transition">
-              Terms
-            </a>
+            <a href="#" className="hover:text-gray-600 transition">Privacy</a>
+            <a href="#" className="hover:text-gray-600 transition">Terms</a>
           </div>
         </div>
       </div>

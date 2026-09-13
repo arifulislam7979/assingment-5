@@ -36,11 +36,7 @@ const Header = () => {
 
           {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={image}
-              alt="Development Stack"
-              className="w-full max-w-sm md:max-w-md lg:max-w-xl"
-            />
+            <img src={image} alt="Development Stack" className="w-full max-w-sm md:max-w-md lg:max-w-xl" />
           </div>
         </div>
       </div>

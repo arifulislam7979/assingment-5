@@ -81,22 +81,15 @@ const Explore = ({ devData }: ExploreProps) => {
                   {addStack.length} Technology Selected
                 </p>
 
-                {/* Stack List or Empty State */}
+                
                 {
                   <div className="space-y-3">
-                    {/* Selected Items */}
+                    
                     <div className="space-y-2.5">
                       {addStack.map((stack) => (
-                        <div
-                          key={stack.id}
-                          className="flex items-center justify-between border border-gray-200 rounded-xl p-3 bg-white"
-                        >
+                        <div key={stack.id} className="flex items-center justify-between border border-gray-200 rounded-xl p-3 bg-white">
                           <div className="flex items-center gap-3">
-                            <img
-                              src={stack.icon}
-                              alt={stack.name}
-                              className="w-8 h-8 object-contain"
-                            />
+                            <img src={stack.icon} alt={stack.name} className="w-8 h-8 object-contain" />
                             <div>
                               <h4 className="text-sm font-bold text-gray-900 leading-tight">
                                 {stack.name}
@@ -107,11 +100,8 @@ const Explore = ({ devData }: ExploreProps) => {
                             </div>
                           </div>
 
-                          {/* Single Item Remove Button */}
-                          <button
-                            onClick={() => handleRemoveSingle(stack.id)}
-                            className="text-gray-400 hover:text-gray-600 transition p-1 cursor-pointer"
-                          >
+                          
+                          <button onClick={() => handleRemoveSingle(stack.id)} className="text-gray-400 hover:text-gray-600 transition p-1 cursor-pointer" >
                             <RxCross1 />
                           </button>
                         </div>
@@ -119,9 +109,7 @@ const Explore = ({ devData }: ExploreProps) => {
                     </div>
 
                     {/* Remove All Button */}
-                    <button
-                      onClick={handleRemoveAll}
-                      className="w-full mt-4 border border-red-200 text-red-500 font-medium text-sm py-2.5 rounded-xl hover:bg-red-50 transition cursor-pointer"
+                    <button onClick={handleRemoveAll} className="w-full mt-4 border border-red-200 text-red-500 font-medium text-sm py-2.5 rounded-xl hover:bg-red-50 transition cursor-pointer"
                     >
                       Remove All
                     </button>
