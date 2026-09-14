@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="container mx-auto ">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10 py-10 md:py-14 lg:py-20">
-          {/* Text */}
+          {/* text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#0F172A] leading-tight">
               Build Your Ideal <br />
@@ -23,7 +23,7 @@ const Header = () => {
               next project.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-10">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start px-4 md:px-0 gap-4 mt-10">
               <button className="bg-linear-to-r from-orange-500 to-pink-500 text-white lg:px-6 md:px-4 py-3 rounded-lg font-semibold cursor-pointer">
                 Explore Technologies
               </button>
@@ -34,7 +34,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img src={image} alt="Development Stack" className="w-full max-w-sm md:max-w-md lg:max-w-xl" />
           </div>

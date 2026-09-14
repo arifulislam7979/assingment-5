@@ -74,7 +74,7 @@ const Explore = ({ devData }: ExploreProps) => {
               </div>
             </div>
           ) : (
-            <div className="lg:col-span-1 sticky top-6">
+            <div className="lg:col-span-1 sticky top-16">
               <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900">Your Stack</h3>
                 <p className="text-sm text-gray-400 mb-5">

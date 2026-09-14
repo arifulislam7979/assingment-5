@@ -9,6 +9,22 @@ export interface ExploreCardProps {
 }
 
 const ExploreCard = ({ data, handleAddStack, isAdded }: ExploreCardProps) => {
+  
+  const getBadgeStyle = (badgeName: string) => {
+    if(badgeName === 'Popular') {
+      return "bg-sky-50 text-sky-600 border-sky-200"; 
+    } else if (badgeName === 'Fast') {
+      return 'bg-orange-50 text-orange-600 border-orange-200';
+    }else if (badgeName === "Containers") {
+      return "bg-green-50 text-green-600 border-green-200";
+    } else if (badgeName === "Top SQL") {
+      return "bg-cyan-50 text-cyan-600 border-cyan-200";
+    } else if (badgeName === "Essential") {
+      return "bg-indigo-50 text-indigo-600 border-indigo-200";
+    } else {
+      return "bg-gray-50 text-gray-600 border-gray-200";
+    }
+  }
   return (
     <div
       className={`${isAdded ? "border border-pink-500 rounded-xl" : "border border-gray-200 rounded-xl"} p-5 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between`}
@@ -16,7 +32,7 @@ const ExploreCard = ({ data, handleAddStack, isAdded }: ExploreCardProps) => {
       <div>
         <div className="flex items-center justify-between mb-4">
           <img src={data.icon} alt={data.name} className="w-10 h-10 " />
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-600">
+          <span className={`text-xs font-medium px-3 py-1 rounded-full border ${getBadgeStyle(data.badge)}`}>
             {data.badge}
           </span>
         </div>
